@@ -15,16 +15,23 @@
  * 
  */
  
-var string3 = 'Fizz';
-var string5 = 'Buzz';
-    for (var i=0; i<101; i++){
-    if (i%15 === 0)
-        console.log(string3+string5);
-    else if (i%3 === 0)
-        console.log(string3);
-    else if (i%5 === 0)
-        console.log(string5)
-    else
-        console.log(i)
-    }
  
+ function fizzBuzzer(fb_range){
+    /* takes the range for the classic FizzBuzz problem
+     * Returns a multi-line string 
+     */
+     
+    var string3 = 'Fizz';
+    var string5 = 'Buzz';
+        for (var i=0; i<101; i++){
+        if (i%15 === 0)
+            console.log(string3+string5);
+        else if (i%3 === 0)
+            console.log(string3);
+        else if (i%5 === 0)
+            console.log(string5)
+        else
+            console.log(i)
+        }
+ 
+ }
