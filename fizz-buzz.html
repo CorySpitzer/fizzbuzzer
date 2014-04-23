@@ -8,8 +8,23 @@
 
 <body>
 
+<!--
+   <script type="text/javascript" src="FizzBuzz.js"> </script>
+-->
    <script type="text/javascript">
-      
+      var string3 = 'Fizz';
+      var string5 = 'Buzz';
+        for (var i=0; i<101; i++){
+            if (i%15 === 0)
+                document.write('<p>'+string3+string5+'</p>');
+            else if (i%3 === 0)
+                document.write('<p>'+string3+'</p>');
+            else if (i%5 === 0)
+                document.write('<p>'+string5+'</p>')
+            else
+                document.write('<p>'+i+'</p>')
+        }
+ 
    </script>
 
 </body>
