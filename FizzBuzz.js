@@ -16,22 +16,39 @@
  */
  
  
- function fizzBuzzer(fb_range){
-    /* takes the range for the classic FizzBuzz problem
+ 
+ function fizzBuzzer(fb_range, fizz_num, buzz_num){
+    /* Function for the classic FizzBuzz problem
      * Returns a multi-line string 
+     * 
+     * In NodeJS we should have something like
+     * > fizzBuzzer(6, 2, 3)
+     *   1
+     *   Fizz
+     *   Buzz
+     *   Fizz
+     *   5
+     *   FizzBuzz
      */
-     
-    var string3 = 'Fizz';
-    var string5 = 'Buzz';
-        for (var i=0; i<101; i++){
-        if (i%15 === 0)
-            console.log(string3+string5);
-        else if (i%3 === 0)
-            console.log(string3);
-        else if (i%5 === 0)
-            console.log(string5)
+    
+    var fizzbuzz_num = fizz_num*buzz_num;
+    var out_string = '';
+    var str1 = 'Fizz';
+    var str2 = 'Buzz';
+
+    
+    for (var i=0; i<=fb_range; i++){
+        if (i%fizzbuzz_num === 0)
+            out_string + str1 + str2 + '\n';
+        else if (i%fizz_num === 0)
+            out_string + str1 + '\n';
+        else if (i%buzz_num === 0)
+            out_string + str2 + '\n';
         else
-            console.log(i)
+            out_string + i + '\n';
         }
+    return out_string;
  
  }
+ 
+ console.log(fizzBuzzer(100, 3, 5));
