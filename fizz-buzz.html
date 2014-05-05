@@ -4,19 +4,29 @@
 <head>
    <meta charset="utf-8" />
    <title>FizzBuzz</title>
+   <link type="text/css" rel="stylesheet" href="stylesheet.css">
+   
+   <script type="text/javascript">
+      function fizzbuzz() {
+      	alert("The function functioned.")
+      }
+   </script>   
+   
 </head>
 
 <body>
     <h>A customizable FizzBuzz Machine</h>
     <p> With the ability to simulate a wagon</p>
-
-    <p>Enter a string, such as 'Fizz' <input type='text' name='str3'> </p>
-    <p>Enter a string, such as 'Buzz' <input type='text' name='str5'> </p>
-
+    <form>
+        <p>Enter a string, such as 'Fizz' <input type='text' id='strA'> </p>
+        <p>Enter a string, such as 'Buzz' <input type='text' id='strB'> </p>
+        
+        <input type='button' onclick='fizzbuzz()' value='FizzBuzzer!' />
+    </form>
 <!--
    <script type="text/javascript" src="FizzBuzz.js"> </script>
 -->
-   <script type="text/javascript">
+   <script type='text/javascript'>
       var string3 = 'Fizz';
       var string5 = 'Buzz';
         for (var i=0; i<101; i++){
