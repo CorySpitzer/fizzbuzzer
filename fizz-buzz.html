@@ -7,6 +7,7 @@
    <link type="text/css" rel="stylesheet" href="stylesheet.css">
    
    <script type="text/javascript">
+       
       function fizzbuzz() {
         var str3 = strA.value
         var str5 = strB.value
@@ -23,6 +24,11 @@
                 document.getElementById('FBout').innerHTML += '<li>'+i+'</li>';
         }
       }
+      
+      function resetFB(){
+         document.getElementById('FBout').innerHTML = '<br>';   
+      }
+      
    </script>   
    
 </head>
@@ -35,6 +41,8 @@
         <p>Enter a string, such as 'Buzz' <input type='text' id='strB'> </p>
         
         <input type='button' onclick='fizzbuzz()' value='FizzBuzzer!' />
+        <br>
+        <input type='button' onclick='resetFB()' value='Reset' />
     </form>
     
     <ul id='FBout'> 
