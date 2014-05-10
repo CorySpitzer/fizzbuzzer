@@ -9,10 +9,14 @@
    <script type="text/javascript">
        
       function fizzbuzz() {
+        // I wanted to add '+1' to the var below but that results in
+        // times 10, duh! WAT?!
+        var len = loopLength.value
+        //alert('The loop length is ' + len);
         var str3 = strA.value
         var str5 = strB.value
       	//alert("The first string was " + strA.value + "\nThe second string was " + strB.value);
-        for (var i=0; i<101; i++){
+        for (var i=0; i<len; i++){
             //alert("loop starting, i = " + i);
             if (i%15 === 0)
                 document.getElementById('FBout').innerHTML += '<li>'+str3+str5+'</li>';
@@ -40,13 +44,17 @@
         <p>Enter a string, such as 'Fizz' <input type='text' id='strA'> </p>
         <p>Enter a string, such as 'Buzz' <input type='text' id='strB'> </p>
         
+        <p>Enter the loop length <input type='text' id='loopLength'> </p>
+        
         <input type='button' onclick='fizzbuzz()' value='FizzBuzzer!' />
         <br>
         <input type='button' onclick='resetFB()' value='Reset' />
     </form>
     
-    <ul id='FBout'> 
-    </ul>
+    <div id='FBcontainer'>
+        <ul id='FBout'> 
+        </ul>
+    </div>
 
 </body>
 

@@ -18,6 +18,10 @@ body {
 
 }
 
+#FBcontainer {
+   font-size: small;
+}
+
 ul {
     list-style-type: none;
 }
