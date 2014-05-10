@@ -10,12 +10,18 @@ MIT Licence
 
 */
 
+html {
+   background-color: ghostwhite;;
+}
+
 head {
 
 }
 
 body {
-
+   padding: 2%;
+   margin: 3px;
+   background-color: lightgray;
 }
 
 #FBcontainer {
