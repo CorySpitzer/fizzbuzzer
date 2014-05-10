@@ -8,7 +8,20 @@
    
    <script type="text/javascript">
       function fizzbuzz() {
-      	alert("The function functioned.")
+        var str3 = strA.value
+        var str5 = strB.value
+      	//alert("The first string was " + strA.value + "\nThe second string was " + strB.value);
+        for (var i=0; i<101; i++){
+            //alert("loop starting, i = " + i);
+            if (i%15 === 0)
+                document.getElementById('FBout').innerHTML += '<li>'+str3+str5+'</li>';
+            else if (i%3 === 0)
+                document.getElementById('FBout').innerHTML += '<li>'+str3+'</li>';
+            else if (i%5 === 0)
+                document.getElementById('FBout').innerHTML += '<li>'+str5+'</li>';
+            else
+                document.getElementById('FBout').innerHTML += '<li>'+i+'</li>';
+        }
       }
    </script>   
    
@@ -23,9 +36,20 @@
         
         <input type='button' onclick='fizzbuzz()' value='FizzBuzzer!' />
     </form>
+    
+    <ul id='FBout'> 
+    
+    </ul>
+    
+<!--
+    <ul>
+        <li> Test item</li>
+    </ul>
+-->
 <!--
    <script type="text/javascript" src="FizzBuzz.js"> </script>
 -->
+<!--
    <script type='text/javascript'>
       var string3 = 'Fizz';
       var string5 = 'Buzz';
@@ -41,6 +65,7 @@
         }
  
    </script>
+-->
 
 </body>
 
