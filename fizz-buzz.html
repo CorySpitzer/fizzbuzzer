@@ -10,19 +10,26 @@
        
       function fizzbuzz() {
         // I wanted to add '+1' to the var below but that results in
-        // times 10, duh! WAT?!
-        var len = loopLength.value
+        // times 10, 20+1 = 200. duh! WAT?!
+        var len = loopLength.value;
         //alert('The loop length is ' + len);
-        var str3 = strA.value
-        var str5 = strB.value
+        
+        var perA = periodA.value;
+        var perB = periodB.value;
+        var perAB = perA*perB
+        //alert ('perAB = ' + perAB);
+        
+        var str3 = strA.value;
+        var str5 = strB.value;
       	//alert("The first string was " + strA.value + "\nThe second string was " + strB.value);
+        
         for (var i=0; i<len; i++){
             //alert("loop starting, i = " + i);
-            if (i%15 === 0)
+            if (i%perAB === 0)
                 document.getElementById('FBout').innerHTML += '<li>'+str3+str5+'</li>';
-            else if (i%3 === 0)
+            else if (i%perA === 0)
                 document.getElementById('FBout').innerHTML += '<li>'+str3+'</li>';
-            else if (i%5 === 0)
+            else if (i%perB === 0)
                 document.getElementById('FBout').innerHTML += '<li>'+str5+'</li>';
             else
                 document.getElementById('FBout').innerHTML += '<li>'+i+'</li>';
@@ -38,11 +45,13 @@
 </head>
 
 <body>
-    <h>A customizable FizzBuzz Machine</h>
-    <p> With the ability to simulate a wagon</p>
+    <h1>A customizable FizzBuzz Machine</h1>
+    <h2> With the ability to simulate a wagon</h2>
     <form>
-        <p>Enter a string, such as 'Fizz' <input type='text' id='strA'> </p>
-        <p>Enter a string, such as 'Buzz' <input type='text' id='strB'> </p>
+        <p>Enter a string, such as 'Fizz': <input type='text' id='strA'> </p>
+        <p>Enter a period to repeat the above: <input type='text' id='periodA'> </p>
+        <p>Enter a string, such as 'Buzz': <input type='text' id='strB'> </p>
+        <p>Enter a period to repeat the above: <input type='text' id='periodB'> </p>
         
         <p>Enter the loop length <input type='text' id='loopLength'> </p>
         
